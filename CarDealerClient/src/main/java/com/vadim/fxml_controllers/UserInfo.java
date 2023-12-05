@@ -78,7 +78,7 @@ public class UserInfo {
         String mail = fieldEmail.getText();
         String login = fieldLogin.getText();
         String pass = fieldPassword.getText();
-        
+
 
         if (name.isEmpty() && mail.isEmpty() && pass.isEmpty()) {
             EnterController.ThrowAlert("Error", "Error", "All is empty");

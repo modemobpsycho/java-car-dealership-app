@@ -35,7 +35,7 @@ public class EnterController {
     public Label loginLabel;
 
     @FXML
-    public void initialize(){
+    public void initialize() {
         header.setText("Car salon");
         passLabel.setText("Pass");
         loginLabel.setText("Login");
@@ -46,7 +46,7 @@ public class EnterController {
     }
 
     @FXML
-    private void buttonEnterAction(ActionEvent event) throws IOException, ClassNotFoundException{
+    private void buttonEnterAction(ActionEvent event) throws IOException, ClassNotFoundException {
         String login;
         String pass;
         login = textFieldLogin.getText();
