@@ -151,7 +151,7 @@ public class MainMenuAdmin {
         modelColumn2.setCellValueFactory(new PropertyValueFactory<SuperMMID, String>("model"));
         idColumn2.setCellValueFactory(new PropertyValueFactory<SuperMMID, Integer>("id"));
 
-        ArrayList<Car> cars = RequestController.getCarsTable();
+        ArrayList<Car> cars = RequestController.GetCarsTable();
         for (var c : cars) {
             CarsData.add(c);
         }

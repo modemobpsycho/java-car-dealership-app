@@ -277,4 +277,10 @@ public class RequestController {
         ArrayList<SuperMMID> accepted = (ArrayList<SuperMMID>) Client.istream.readObject();
         return accepted;
     }
+
+    public static ArrayList<Tables> GetOldCars() throws IOException, ClassNotFoundException {
+        Client.ostream.writeObject(Constants.GET_OLD_CARS_TABLE);
+        ArrayList<Tables> cars = (ArrayList<Tables>) Client.istream.readObject();
+        return cars;
+    }
 }
