@@ -277,4 +277,8 @@ public class RequestController {
         ArrayList<SuperMMID> accepted = (ArrayList<SuperMMID>) Client.istream.readObject();
         return accepted;
     }
+
+    public static ArrayList<Car> getCarsTable() {
+        return ;
+    }
 }
