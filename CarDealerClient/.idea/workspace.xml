@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2466c287-041b-4953-ace8-7f1bd160922f" name="Changes" comment="updates">
+    <list default="true" id="2466c287-041b-4953-ace8-7f1bd160922f" name="Changes" comment="JDKLGFHSLKFJGSDJ:GLKjhb:KDJGS">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vadim/fxml_controllers/MainMenuAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vadim/fxml_controllers/MainMenuAdmin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/vadim/fxml_controllers/MainMenuUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vadim/fxml_controllers/MainMenuUser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +60,7 @@
       <option name="presentableId" value="Default" />
       <updated>1701634295819</updated>
       <workItem from="1701634296889" duration="25000" />
-      <workItem from="1701787632254" duration="11166000" />
+      <workItem from="1701787632254" duration="12440000" />
     </task>
     <task id="LOCAL-00001" summary="some changes and new fxml's">
       <option name="closed" value="true" />
@@ -143,7 +142,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702069965259</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="JDKLGFHSLKFJGSDJ:GLKjhb:KDJGS">
+      <option name="closed" value="true" />
+      <created>1702071283560</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1702071283560</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,6 +160,7 @@
     <MESSAGE value="some changes and new fxml's" />
     <MESSAGE value="more fxml's" />
     <MESSAGE value="updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="updates" />
+    <MESSAGE value="JDKLGFHSLKFJGSDJ:GLKjhb:KDJGS" />
+    <option name="LAST_COMMIT_MESSAGE" value="JDKLGFHSLKFJGSDJ:GLKjhb:KDJGS" />
   </component>
 </project>

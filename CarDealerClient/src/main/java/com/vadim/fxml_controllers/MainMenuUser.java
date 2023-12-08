@@ -218,9 +218,79 @@ public class MainMenuUser {
 
     @FXML
     public void initialize() throws IOException, ClassNotFoundException {
+        //ЗДЕСЬ МОЖНО УЗНАТЬ ЮЗ КАСИКИ
         header.setText("User menu");
         exitMenu.setText("Exit");
-        exitItem.set("Exit from acc");
+        exitItem.setText("Exit from acc");
+        changeMenu.setText("Change");
+        changeItem.setText("Change acc");
+        deleteItem.setText("Delete acc");
+
+        infoTitled.setText("Personal info");
+        infoTab.setText("Main info");
+        nameLabel1.setText("Surname and name");
+        mailLabel1.setText("Mail");
+        loginLabel1.setText("Login");
+
+        newButton.setText("Buy new car");
+        oldButton.setText("Buy old car");
+        soldTitled.setText("Sold car");
+        makeLabel.setText("Make");
+        modelLabel.setText("Model");
+        bodyLabel.setText("Body");
+        priceLabel.setText("Price");
+        makeField.setPromptText("Make");
+        modelField.setPromptText("Model");
+        bodyBox.setPromptText("Body");
+        priceField.setPromptText("Price");
+        soldButton.setText("Sold");
+
+        allTitled.setText("Show all cars");
+        searchTextField.setPromptText("Find by make");
+        searchTextField1.setPromptText("Find by make");
+        searchTextField11.setPromptText("Find by make");
+
+        searchButton.setText("Search");
+        makeColumn1.setText("Make");
+        makeColumn_2.setText("Make");
+        makeColumn11.setText("Make");
+        makeColumn_21.setText("Make");
+        makeColumn.setText("Make");
+
+        modelColumn1.setText("Model");
+        modelColumn11.setText("Model");
+        modelColumn.setText("Model");
+
+        bodyColumn1.setText("Body");
+        bodyColumn11.setText("Body");
+        bodyColumn.setText("Body");
+
+        priceColumn.setText("Price");
+        priceColumn1.setText("Price");
+        priceColumn11.setText("Price");
+
+        idColumn1.setText("User ID");
+        idColumn_2.setText("User ID");
+        idColumn_21.setText("User ID");
+
+        mailColumn1.setText("Mail");
+        mailColumn_2.setText("Mail");
+        mailColumn_21.setText("Mail");
+
+        incomingTitled.setText("Incoming requests");
+        sendedTitled.setText("Sended requests");
+
+        makeIDTextField.setPromptText("Make and ID");
+        makeModelTextField.setPromptText("Make and Model");
+        searchButton1.setText("Search");
+        searchButton2.setText("Search");
+        sendButton.setText("Send");
+        sendButton1.setText("Send");
+        backButton1.setText("Back");
+        backButton2.setText("Back");
+
+        makeidLabel.setText("Enter make and user ID");
+        makeidLabel1.setText("Enter make and model");
     }
 
 }
