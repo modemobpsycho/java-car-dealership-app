@@ -116,7 +116,7 @@ public class MainMenuAdmin {
 
 
     public MainMenuAdmin() {
-        Client.changeStageSize(Client.st, 915, 687);
+        Client.changeStageSize(Client.st, 915, 680);
     }
 
     @FXML
