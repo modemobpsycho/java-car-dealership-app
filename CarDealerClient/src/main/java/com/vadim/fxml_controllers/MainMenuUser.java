@@ -4,9 +4,11 @@ import com.vadim.Car;
 import com.vadim.RequestController;
 import com.vadim.User;
 import com.vadim.Client;
+import com.vadim.tables.IdMailMake;
 import com.vadim.tables.SuperMMID;
-
+import com.vadim.CheckerInput;
 import com.vadim.tables.Tables;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -41,7 +43,6 @@ public class MainMenuUser {
     private TableView<SuperMMID> userSendedRequest;
 
 
-
     @FXML
     private TableColumn<Car, String> makeColumn;
     @FXML
@@ -50,7 +51,6 @@ public class MainMenuUser {
     private TableColumn<Car, String> bodyColumn;
     @FXML
     private TableColumn<Car, Integer> priceColumn;
-
 
 
     @FXML
@@ -68,7 +68,6 @@ public class MainMenuUser {
     private TableColumn<SuperMMID, String> mailColumn_21;
 
 
-
     @FXML
     private TableColumn<Tables, Integer> idColumn1;
     @FXML
@@ -81,7 +80,6 @@ public class MainMenuUser {
     private TableColumn<Tables, String> mailColumn1;
     @FXML
     private TableColumn<Tables, Integer> priceColumn1;
-
 
 
     @FXML
@@ -123,7 +121,6 @@ public class MainMenuUser {
     private AnchorPane NewCarsPane;
 
 
-
     @FXML
     private Label emailLabel;
     @FXML
@@ -161,7 +158,7 @@ public class MainMenuUser {
     @FXML
     private Button backButton1;
     @FXML
-    private Button  backButton2;
+    private Button backButton2;
     @FXML
     private Label modelLabel;
     @FXML
@@ -203,13 +200,12 @@ public class MainMenuUser {
     private ObservableList<SuperMMID> IncomingRequests = FXCollections.observableArrayList();
 
 
-
     private ObservableList<Tables> Data = FXCollections.observableArrayList();
     private ObservableList<Car> NewData = FXCollections.observableArrayList();
 
     private ObservableList<String> bodies = FXCollections.observableArrayList();
 
-    private static boolean called=false;
+    private static boolean called = false;
 
 
     public MainMenuUser() {
@@ -291,6 +287,23 @@ public class MainMenuUser {
 
         makeidLabel.setText("Enter make and user ID");
         makeidLabel1.setText("Enter make and model");
+
+
+
+
+        idLabel.setText(Integer.toString(RequestController.user.getId()));
+        nameLabel.setText(RequestController.user.getName()+" "+RequestController.user.getSurname());
+        emailLabel.setText(RequestController.user.getMail());
+        loginLabel.setText(RequestController.user.getLogin());
+
+        ArrayList<Car> аcars = RequestController.GetCarsTable();
+        ArrayList<IdMailMake> sended = RequestController.GetSended();
+        ArrayList<IdMailMake> incoming = RequestController.GetIncoming();
+
     }
+
+
+
+
 
 }

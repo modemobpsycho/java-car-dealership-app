@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2466c287-041b-4953-ace8-7f1bd160922f" name="Changes" comment="JDKLGFHSLKFJGSDJ:GLKjhb:KDJGS">
+    <list default="true" id="2466c287-041b-4953-ace8-7f1bd160922f" name="Changes" comment="badabum">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/vadim/fxml_controllers/MainMenuUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vadim/fxml_controllers/MainMenuUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com.vadim/UserMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com.vadim/UserMenu.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +52,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\study3course\CourseWork\CarDealerShip\CarDealerClient\src\main\resources\com.vadim" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -60,7 +66,7 @@
       <option name="presentableId" value="Default" />
       <updated>1701634295819</updated>
       <workItem from="1701634296889" duration="25000" />
-      <workItem from="1701787632254" duration="12440000" />
+      <workItem from="1701787632254" duration="14931000" />
     </task>
     <task id="LOCAL-00001" summary="some changes and new fxml's">
       <option name="closed" value="true" />
@@ -150,7 +156,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702071283560</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="badabum">
+      <option name="closed" value="true" />
+      <created>1702072556720</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1702072556720</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,6 +175,7 @@
     <MESSAGE value="more fxml's" />
     <MESSAGE value="updates" />
     <MESSAGE value="JDKLGFHSLKFJGSDJ:GLKjhb:KDJGS" />
-    <option name="LAST_COMMIT_MESSAGE" value="JDKLGFHSLKFJGSDJ:GLKjhb:KDJGS" />
+    <MESSAGE value="badabum" />
+    <option name="LAST_COMMIT_MESSAGE" value="badabum" />
   </component>
 </project>
