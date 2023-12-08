@@ -281,4 +281,7 @@ public class RequestController {
     public static ArrayList<Car> getCarsTable() {
         return ;
     }
+
+    public static Object getAccepted() {
+    }
 }

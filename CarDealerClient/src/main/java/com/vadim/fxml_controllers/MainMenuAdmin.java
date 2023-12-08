@@ -54,7 +54,6 @@ public class MainMenuAdmin {
     private TableColumn<Car, Integer> priceColumn;
 
 
-
     @FXML
     private TableColumn<User, Integer> idColumn;
     @FXML
@@ -67,7 +66,6 @@ public class MainMenuAdmin {
     private TableColumn<User, String> mailColumn;
 
 
-
     @FXML
     private TableColumn<User, Integer> idColumn11;
     @FXML
@@ -78,7 +76,6 @@ public class MainMenuAdmin {
     private TableColumn<User, String> loginColumn11;
     @FXML
     private TableColumn<User, String> mailColumn11;
-
 
 
     @FXML
@@ -95,10 +92,8 @@ public class MainMenuAdmin {
     private TableColumn<SuperMMID, Integer> idColumn2;
 
 
-
     @FXML
     private Label nameLabel;
-
 
 
     @FXML
@@ -157,45 +152,45 @@ public class MainMenuAdmin {
         idColumn2.setCellValueFactory(new PropertyValueFactory<SuperMMID, Integer>("id"));
 
         ArrayList<Car> cars = RequestController.getCarsTable();
-        for(var c:cars){
+        for (var c : cars) {
             CarsData.add(c);
         }
 
-        ArrayList<User> users=RequestController.GetAllUsers();
-        for(var c:users){
+        ArrayList<User> users = RequestController.GetAllUsers();
+        for (var c : users) {
             Users.add(c);
         }
         allUsersTable.setItems(Users);
 
-        ArrayList<User> admins=RequestController.GetAllAdmins();
-        for(var c:admins){
+        ArrayList<User> admins = RequestController.GetAllAdmins();
+        for (var c : admins) {
             Admins.add(c);
         }
         allAdminsTable.setItems(Admins);
 
-        ArrayList<SuperMMID> incoming=RequestController.GetIncoming_();
-        for(var c:incoming)
+        ArrayList<SuperMMID> incoming = RequestController.GetIncoming_();
+        for (var c : incoming)
             IncomingRequests.add(c);
         userIncomingRequest.setItems(IncomingRequests);
 
-        ArrayList<SuperMMID> accepted=RequestController.GetAccepted();
-        for(var c:accepted)
+        ArrayList<SuperMMID> accepted = RequestController.GetAccepted();
+        for (var c : accepted)
             AcceptedRequests.add(c);
         acceptedRequests.setItems(AcceptedRequests);
     }
 
     @FXML
-    void ExitAction(ActionEvent event){
+    void ExitAction(ActionEvent event) {
 
     }
 
     @FXML
-    void SearchButton(ActionEvent event){
+    void SearchButton(ActionEvent event) {
         String make = searchTextField.getText();
-        if (!make.isEmpty()){
+        if (!make.isEmpty()) {
             ObservableList<Car> arr = FXCollections.observableArrayList();
             for (var c : CarsData) {
-                if (c.getMake().equals(make)){
+                if (c.getMake().equals(make)) {
                     arr.add(c);
                 }
             }
@@ -227,9 +222,63 @@ public class MainMenuAdmin {
         try {
             Integer i = Integer.parseInt(id);
             RequestController.BlockUser(i);
-        }
-        catch (NumberFormatException e) {
+        } catch (NumberFormatException e) {
             EnterController.ThrowAlert("Error", "", "Wrong id");
         }
+    }
+
+    @FXML
+    void DeleteUser(ActionEvent event) throws IOException, ClassNotFoundException {
+        String id = idTextField.getText();
+        System.out.println(id);
+        try {
+            Integer i = Integer.parseInt(id);
+            RequestController.DeleteAcc(i);
+            Users.clear();
+            Admins.clear();
+            ArrayList<User> users = RequestController.GetAllUsers();
+            for (var c : users) {
+                Users.add(c);
+            }
+            allAdminsTable.setItems(Admins);
+        } catch (NumberFormatException e) {
+            EnterController.ThrowAlert("Error", "", "Wrong id");
+        }
+    }
+
+    @FXML
+    void AddAdmin(ActionEvent event) throws IOException, ClassNotFoundException {
+        Client.setRoot("regAdmin");
+    }
+
+    @FXML
+    void AcceptRequest(ActionEvent event) throws IOException, ClassNotFoundException {
+        String[] make_id;
+        String field = idTextField.getText();
+        Integer ID;
+        make_id = field.split(" ");
+        if (field.isEmpty()) {
+            EnterController.ThrowAlert("Error", "Error", "Something is empty");
+        } else if (!CheckerInput.validateMakeID(field))
+            EnterController.ThrowAlert("Error", "Error", "Wrong id");
+        else {
+            ID = Integer.parseInt(make_id[1]);
+            if (ID == RequestController.user.getId())
+                EnterController.ThrowAlert("Error", "Error", "Wrong id");
+            else {
+                RequestController.AcceptRequest(ID, make_id[0]);
+                AcceptedRequests.clear();
+                var accepted = RequestController.GetAccepted();
+                for (var c : accepted) {
+                    AcceptedRequests.add(c);
+                }
+                IncomingRequests.clear();
+                var incoming = RequestController.GetIncoming_();
+                for (var c : incoming) {
+                    IncomingRequests.add(c);
+                }
+            }
+        }
+
     }
 }
