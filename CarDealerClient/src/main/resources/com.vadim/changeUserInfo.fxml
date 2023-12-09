@@ -52,6 +52,6 @@
                     </font>
                 </Label>
             </children></AnchorPane>
-        <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#exitUserMenu" style="-fx-background-color: black-red; -fx-border-color: rgb(128, 128, 128);" text="Вернуться" textFill="WHITE" />
+        <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#exitUserMenu" style="-fx-background-color: Gray; -fx-border-color: rgb(128, 128, 128);" text="Вернуться" textFill="WHITE" />
     </children>
 </AnchorPane>

@@ -40,7 +40,7 @@ public class AdminRegistrationController {
     @FXML
     private Label passLabel;
     @FXML
-    private Label backButton;
+    private Button backButton;
     @FXML
     private Label header;
 

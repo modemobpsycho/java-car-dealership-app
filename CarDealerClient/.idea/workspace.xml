@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2466c287-041b-4953-ace8-7f1bd160922f" name="Changes" comment="css file and fxml's">
+    <list default="true" id="2466c287-041b-4953-ace8-7f1bd160922f" name="Changes" comment="rework and new fxml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vadim/fxml_controllers/AdminRegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vadim/fxml_controllers/AdminRegistrationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com.vadim/changeUserInfo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com.vadim/changeUserInfo.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com.vadim/mainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com.vadim/mainWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com.vadim/regadmin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com.vadim/regadmin.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CarDealerServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CarDealerServer/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +73,7 @@
       <option name="presentableId" value="Default" />
       <updated>1701634295819</updated>
       <workItem from="1701634296889" duration="25000" />
-      <workItem from="1701787632254" duration="28787000" />
+      <workItem from="1701787632254" duration="29442000" />
     </task>
     <task id="LOCAL-00001" summary="some changes and new fxml's">
       <option name="closed" value="true" />
@@ -242,7 +243,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702156440633</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="rework and new fxml">
+      <option name="closed" value="true" />
+      <created>1702159263721</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1702159263721</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,7 +269,8 @@
     <MESSAGE value="rework again, some errors SJDHAIFOBJDSAHLKF:SDKF((" />
     <MESSAGE value="rework" />
     <MESSAGE value="css file and fxml's" />
-    <option name="LAST_COMMIT_MESSAGE" value="css file and fxml's" />
+    <MESSAGE value="rework and new fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="rework and new fxml" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
