@@ -29,6 +29,7 @@ public class MainMenuAdmin {
     private TableView<Car> allCarsTable;
     @FXML
     private TableView<User> allUsersTable;
+    @FXML
     private TableView<User> allAdminsTable;
     @FXML
     private TableView<SuperMMID> userIncomingRequest;
