@@ -26,6 +26,7 @@ import javafx.scene.control.TitledPane;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 
+import javax.swing.*;
 import java.io.IOException;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -411,19 +412,19 @@ public class MainMenuUser {
     }
 
     @FXML
-    void SendRequestNew(ActionEvent event) throws IOException,ClassNotFoundException {
-        String[]fio;
-        String name=makeModelTextField.getText();
-        fio=name.split(" ");
+    void SendRequestNew(ActionEvent event) throws IOException, ClassNotFoundException {
+        String[] fio;
+        String name = makeModelTextField.getText();
+        fio = name.split(" ");
         if (name.isEmpty()) {
             EnterController.ThrowAlert("Error", "Error", "Something is empty");
         } else if (!CheckerInput.validateMakeModel(name))
             EnterController.ThrowAlert("Error", "Error", "Wrong format");
         else {
             RequestController.AddRequestNewCar(RequestController.user.getId(), fio[0], fio[1]);
-            ArrayList<IdMailMake> sended=RequestController.GetSended();
+            ArrayList<IdMailMake> sended = RequestController.GetSended();
             SendedRequests.clear();
-            for(var c:sended)
+            for (var c : sended)
                 SendedRequests.add(c);
         }
     }
@@ -431,7 +432,7 @@ public class MainMenuUser {
     @FXML
     void SearchButton(ActionEvent event) {
         String make = searchTextField.getText();
-        if (!make.isEmpty()){
+        if (!make.isEmpty()) {
             ObservableList<Car> arr = FXCollections.observableArrayList();
             for (var c : CarsData) {
                 if (c.getMake().equals(make)) {
@@ -442,6 +443,76 @@ public class MainMenuUser {
         } else {
             allCarsTable.setItems(CarsData);
         }
+    }
+
+    @FXML
+    void SearchButtonInOld(ActionEvent event) {
+        String make = searchTextField1.getText();
+        if (!make.isEmpty()) {
+            ObservableList<Tables> arr = FXCollections.observableArrayList();
+            for (var c : Data) {
+                if (c.getMake().equals(make)) {
+                    arr.add(c);
+                }
+            }
+            OldCarsTable.setItems(arr);
+        } else {
+            OldCarsTable.setItems(Data);
+        }
+    }
+
+    @FXML
+    void SearchButtonInNew(ActionEvent event) {
+        String make = searchTextField11.getText();
+        if (!make.isEmpty()) {
+            ObservableList<Car> arr = FXCollections.observableArrayList();
+            for (var c : NewData) {
+                if (c.getMake().equals(make)) {
+                    arr.add(c);
+                }
+            }
+            NewCarsTable.setItems(arr);
+        } else {
+            NewCarsTable.setItems(NewData);
+        }
+    }
+
+    @FXML
+    void SoldCar(ActionEvent event) throws IOException, ClassNotFoundException {
+        Integer pr;
+        try {
+            pr = Integer.parseInt(priceField.getText());
+            String body = bodyBox.getValue();
+            if (makeField.getText().equals("") || modelField.getText().equals("") || body.isEmpty() || pr <= 0) {
+                EnterController.ThrowAlert("Error", "Error", "Something is empty");
+            } else {
+                Car car = new Car(makeField.getText(), modelField.getText(),
+                        bodyBox.getValue(), pr, Integer.parseInt(idLabel.getText()));
+
+                if (RequestController.SoldCar(car)) {
+                    CarsData.add(car);
+                    allCarsTable.setItems(CarsData);
+                }
+            }
+        } catch (NumberFormatException | NullPointerException e) {
+            EnterController.ThrowAlert("Error", "Error", "Something is wrong");
+        }
+    }
+
+    @FXML
+    void changeUserInfo(ActionEvent event) throws IOException, ClassNotFoundException {
+        Client.setRoot("changeUserInfo");
+    }
+
+    @FXML
+    void comeBack(ActionEvent event) throws IOException {
+        Client.changeStageSize(Client.st, 640, 480);
+        Client.setRoot("mainWindow");
+    }
+
+    @FXML
+    void deleteAcc(ActionEvent event) throws IOException, ClassNotFoundException {
+        RequestController.DeleteAcc(RequestController.user.getId());
     }
 
 
