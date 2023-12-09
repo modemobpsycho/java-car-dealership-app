@@ -156,7 +156,7 @@ public class RequestController {
         return cars;
     }
 
-    public static void AddRequest(String user, String make, Integer iD) throws IOException, ClassNotFoundException {
+    public static void AddRequest(Integer user, String make, Integer iD) throws IOException, ClassNotFoundException {
         Client.ostream.writeObject(Constants.ADD_REQUEST);
         Client.ostream.writeObject(user);
         Client.ostream.writeObject(make);

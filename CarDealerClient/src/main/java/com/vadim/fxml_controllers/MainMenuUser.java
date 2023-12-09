@@ -27,6 +27,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class MainMenuUser {
@@ -38,9 +39,9 @@ public class MainMenuUser {
     @FXML
     private TableView<Car> NewCarsTable;
     @FXML
-    private TableView<SuperMMID> userIncomingRequest;
+    private TableView<IdMailMake> userIncomingRequest;
     @FXML
-    private TableView<SuperMMID> userSendedRequest;
+    private TableView<IdMailMake> userSendedRequest;
 
 
     @FXML
@@ -54,18 +55,18 @@ public class MainMenuUser {
 
 
     @FXML
-    private TableColumn<SuperMMID, String> makeColumn_2;
+    private TableColumn<IdMailMake, String> makeColumn_2;
     @FXML
-    private TableColumn<SuperMMID, Integer> idColumn_2;
+    private TableColumn<IdMailMake, Integer> idColumn_2;
     @FXML
-    private TableColumn<SuperMMID, String> mailColumn_2;
+    private TableColumn<IdMailMake, String> mailColumn_2;
 
     @FXML
-    private TableColumn<SuperMMID, String> makeColumn_21;
+    private TableColumn<IdMailMake, String> makeColumn_21;
     @FXML
-    private TableColumn<SuperMMID, Integer> idColumn_21;
+    private TableColumn<IdMailMake, Integer> idColumn_21;
     @FXML
-    private TableColumn<SuperMMID, String> mailColumn_21;
+    private TableColumn<IdMailMake, String> mailColumn_21;
 
 
     @FXML
@@ -196,8 +197,8 @@ public class MainMenuUser {
 
 
     private ObservableList<Car> CarsData = FXCollections.observableArrayList();
-    private ObservableList<SuperMMID> SendedRequests = FXCollections.observableArrayList();
-    private ObservableList<SuperMMID> IncomingRequests = FXCollections.observableArrayList();
+    private ObservableList<IdMailMake> SendedRequests = FXCollections.observableArrayList();
+    private ObservableList<IdMailMake> IncomingRequests = FXCollections.observableArrayList();
 
 
     private ObservableList<Tables> Data = FXCollections.observableArrayList();
@@ -289,21 +290,125 @@ public class MainMenuUser {
         makeidLabel1.setText("Enter make and model");
 
 
-
-
         idLabel.setText(Integer.toString(RequestController.user.getId()));
-        nameLabel.setText(RequestController.user.getName()+" "+RequestController.user.getSurname());
+        nameLabel.setText(RequestController.user.getName() + " " + RequestController.user.getSurname());
         emailLabel.setText(RequestController.user.getMail());
         loginLabel.setText(RequestController.user.getLogin());
 
-        ArrayList<Car> аcars = RequestController.GetCarsTable();
+        ArrayList<Car> cars = RequestController.GetCarsTable();
         ArrayList<IdMailMake> sended = RequestController.GetSended();
         ArrayList<IdMailMake> incoming = RequestController.GetIncoming();
+
+        bodies.setAll("Хэтчбэк", "Купе", "Седан", "Универсал", "Минивен", "Родстер", "Внедорожник", "Кроссовер", "Пикап", "Кабриолет", "Лимузин");
+        bodyBox.setItems(bodies);
+
+        for (var c : cars) {
+            CarsData.add(c);
+        }
+
+        for (var c : sended) {
+            SendedRequests.add(c);
+        }
+
+        for (var c : incoming) {
+            IncomingRequests.add(c);
+        }
+
+        makeColumn.setCellValueFactory(new PropertyValueFactory<Car, String>("make"));
+        modelColumn.setCellValueFactory(new PropertyValueFactory<Car, String>("model"));
+        bodyColumn.setCellValueFactory(new PropertyValueFactory<Car, String>("body"));
+        priceColumn.setCellValueFactory(new PropertyValueFactory<Car, Integer>("price"));
+
+        makeColumn1.setCellValueFactory(new PropertyValueFactory<Tables, String>("make"));
+        modelColumn1.setCellValueFactory(new PropertyValueFactory<Tables, String>("model"));
+        bodyColumn1.setCellValueFactory(new PropertyValueFactory<Tables, String>("body"));
+        priceColumn1.setCellValueFactory(new PropertyValueFactory<Tables, Integer>("price"));
+        mailColumn1.setCellValueFactory(new PropertyValueFactory<Tables, String>("mail"));
+        idColumn1.setCellValueFactory(new PropertyValueFactory<Tables, Integer>("userID"));
+
+        makeColumn11.setCellValueFactory(new PropertyValueFactory<Car, String>("make"));
+        modelColumn11.setCellValueFactory(new PropertyValueFactory<Car, String>("model"));
+        bodyColumn11.setCellValueFactory(new PropertyValueFactory<Car, String>("body"));
+        priceColumn11.setCellValueFactory(new PropertyValueFactory<Car, Integer>("price"));
+
+        makeColumn_21.setCellValueFactory(new PropertyValueFactory<IdMailMake, String>("make"));
+        idColumn_21.setCellValueFactory(new PropertyValueFactory<IdMailMake, Integer>("id"));
+        mailColumn_21.setCellValueFactory(new PropertyValueFactory<IdMailMake, String>("mail"));
+
+        makeColumn_2.setCellValueFactory(new PropertyValueFactory<IdMailMake, String>("make"));
+        idColumn_2.setCellValueFactory(new PropertyValueFactory<IdMailMake, Integer>("id"));
+        mailColumn_2.setCellValueFactory(new PropertyValueFactory<IdMailMake, String>("mail"));
+
+
+        allCarsTable.setItems(CarsData);
+        userSendedRequest.setItems(SendedRequests);
+        userIncomingRequest.setItems(IncomingRequests);
 
     }
 
 
+    @FXML
+    void ComeBackFromOldTable(ActionEvent event) {
+        OldCarsPane.setVisible(false);
+    }
 
+    @FXML
+    void ComeBackFromNewTable(ActionEvent event) {
+        NewCarsPane.setVisible(false);
+    }
+
+    void BuyOldCar(ActionEvent event) throws IOException, ClassNotFoundException {
+        ArrayList<Tables> cars = RequestController.GetOldCars();
+        Data.clear();
+        for (var c : cars) {
+            Data.add(c);
+        }
+        OldCarsTable.setItems(Data);
+        OldCarsPane.setVisible(true);
+    }
+
+    @FXML
+    void ExitAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void BuyNewCar(ActionEvent event) throws IOException, ClassNotFoundException {
+        ArrayList<Car> cars = RequestController.GetNewCars();
+        NewData.clear();
+        for (var c : cars) {
+            NewData.add(c);
+        }
+        NewCarsTable.setItems(NewData);
+        NewCarsPane.setVisible(true);
+    }
+
+    @FXML
+    void SendRequestOld(ActionEvent event) throws IOException, ClassNotFoundException {
+        String[] fio;
+        String name = makeIDTextField.getText();
+        Integer ID;
+        fio = name.split(" ");
+        if (name.isEmpty()) {
+            EnterController.ThrowAlert("Error", "Error", "Something is empty");
+        } else if (!CheckerInput.validateMakeID(name))
+            EnterController.ThrowAlert("Error", "Error", "Wrong format");
+        else {
+            ID = Integer.parseInt(fio[1]);
+            if (ID == RequestController.user.getId())
+                EnterController.ThrowAlert("Error", "Error", "Wrong id");
+            else {
+                System.out.println(RequestController.user.getId() + fio[0] + ID);
+                RequestController.AddRequest(RequestController.user.getId(), fio[0], ID);
+                ArrayList<IdMailMake> sended = RequestController.GetSended();
+                SendedRequests.clear();
+                for (var c : sended) {
+                    SendedRequests.add(c);
+                }
+
+            }
+        }
+    }
 
 
 }

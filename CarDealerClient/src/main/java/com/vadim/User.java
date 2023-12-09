@@ -13,17 +13,6 @@ public class User implements Serializable {
     private String role = "";
     private String status = "user";
 
-    public User(int id, String name, String surname, String mail, String login, String pass, String role, String status) {
-        this.id = id;
-        this.name = name;
-        this.surname = surname;
-        this.mail = mail;
-        this.login = login;
-        this.pass = pass;
-        this.role = role;
-        this.status = status;
-    }
-
     public User(String name, String surname, String mail, String login) {
         this.name = name;
         this.surname = surname;
@@ -34,7 +23,7 @@ public class User implements Serializable {
     public User() {
     }
 
-    public User(Integer id, String name, String surname, String mail, String login, String pass, String status) {
+    public User(int id, String name, String surname, String mail, String login, String pass, String status) {
         this.id = id;
         this.name = name;
         this.surname = surname;
@@ -44,6 +33,9 @@ public class User implements Serializable {
         this.status = status;
     }
 
+    public int getId() {
+        return id;
+    }
     public String getStatus() {
         return status;
     }
@@ -100,7 +92,4 @@ public class User implements Serializable {
         this.pass = pass;
     }
 
-    public int getId() {
-        return id;
-    }
 }
