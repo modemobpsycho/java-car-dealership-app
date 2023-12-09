@@ -410,5 +410,39 @@ public class MainMenuUser {
         }
     }
 
+    @FXML
+    void SendRequestNew(ActionEvent event) throws IOException,ClassNotFoundException {
+        String[]fio;
+        String name=makeModelTextField.getText();
+        fio=name.split(" ");
+        if (name.isEmpty()) {
+            EnterController.ThrowAlert("Error", "Error", "Something is empty");
+        } else if (!CheckerInput.validateMakeModel(name))
+            EnterController.ThrowAlert("Error", "Error", "Wrong format");
+        else {
+            RequestController.AddRequestNewCar(RequestController.user.getId(), fio[0], fio[1]);
+            ArrayList<IdMailMake> sended=RequestController.GetSended();
+            SendedRequests.clear();
+            for(var c:sended)
+                SendedRequests.add(c);
+        }
+    }
+
+    @FXML
+    void SearchButton(ActionEvent event) {
+        String make = searchTextField.getText();
+        if (!make.isEmpty()){
+            ObservableList<Car> arr = FXCollections.observableArrayList();
+            for (var c : CarsData) {
+                if (c.getMake().equals(make)) {
+                    arr.add(c);
+                }
+            }
+            allCarsTable.setItems(arr);
+        } else {
+            allCarsTable.setItems(CarsData);
+        }
+    }
+
 
 }
