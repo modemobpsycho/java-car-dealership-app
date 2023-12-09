@@ -228,6 +228,16 @@ public class MainMenuAdmin {
     }
 
     @FXML
+    void UnblockUser(ActionEvent event) throws IOException, ClassNotFoundException {
+        String id = idTextField2.getText();
+        try {
+            Integer i = Integer.parseInt(id);
+            RequestController.UnblockUser(i);
+        } catch (NumberFormatException e) {
+            EnterController.ThrowAlert("Error", "", "Wrong id");
+        }
+    }
+    @FXML
     void DeleteUser(ActionEvent event) throws IOException, ClassNotFoundException {
         String id = idTextField.getText();
         System.out.println(id);
