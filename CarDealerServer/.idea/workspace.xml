@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0022c8cd-e508-4c66-b6f6-6c110726a13d" name="Changes" comment="updates in pom.xml for build copypaste">
       <change beforePath="$PROJECT_DIR$/../CarDealerClient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CarDealerClient/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CarDealerClient/src/main/resources/com.vadim/AdminMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../CarDealerClient/src/main/resources/com.vadim/AdminMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CarDealerClient/src/main/java/com/vadim/fxml_controllers/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CarDealerClient/src/main/java/com/vadim/fxml_controllers/UserInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CarDealerClient/src/main/resources/com.vadim/changeUserInfo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../CarDealerClient/src/main/resources/com.vadim/changeUserInfo.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +50,7 @@
       <updated>1701630386501</updated>
       <workItem from="1701630387716" duration="1539000" />
       <workItem from="1701634254344" duration="69000" />
-      <workItem from="1702133680935" duration="11968000" />
+      <workItem from="1702133680935" duration="12752000" />
     </task>
     <task id="LOCAL-00001" summary="finalizing the client">
       <option name="closed" value="true" />
