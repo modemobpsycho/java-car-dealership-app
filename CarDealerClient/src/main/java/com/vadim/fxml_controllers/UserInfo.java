@@ -44,7 +44,7 @@ public class UserInfo {
     @FXML
     private Label passLabel;
     @FXML
-    private Label backButton;
+    private Button backButton;
 
     public UserInfo() {
         Client.changeStageSize(Client.st, 631, 434);
@@ -65,8 +65,6 @@ public class UserInfo {
         fieldEmail.setPromptText("Email");
         fieldLogin.setPromptText("Login");
         fieldPassword.setPromptText("Pass");
-
-        ;
     }
 
     @FXML
