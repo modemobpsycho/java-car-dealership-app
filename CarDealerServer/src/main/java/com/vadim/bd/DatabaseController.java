@@ -22,6 +22,7 @@ public class DatabaseController {
         String mail;
         String status;
 
+
         User user;
         try {
             JDBC.connect();
