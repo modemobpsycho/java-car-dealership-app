@@ -17,4 +17,13 @@ public class Constants {
     public final static String GET_CARS = "get_cars";
     public final static String GET_ADMINS = "get_admins";
     public final static String GET_NEW_CARS_TABLE = "get_new_cars_table";
+    public final static String AUTHORIZATION = "authorization";
+    public final static String SOLD_CAR = "sold_car";
+    public final static String DELETE_ACC = "delete_acc";
+    public static final String GET_INCOMING = "get_incoming";
+    public static final String GET_SENDED = "get_sended";
+    public static final String GET_ACCEPTED_REQ = "get_accepted_req";
+    public static final String GET_INCOMING_REQ = "get_incoming_req";
+    public static final String BLOCK_USER = "block_user";
+    public static final String UNBLOCK_USER = "unblock_user";
 }

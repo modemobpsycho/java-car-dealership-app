@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0022c8cd-e508-4c66-b6f6-6c110726a13d" name="Changes" comment="finalizing the server (maybe)">
+    <list default="true" id="0022c8cd-e508-4c66-b6f6-6c110726a13d" name="Changes" comment="DatabaseController/done ((((((((((((maybe)">
       <change beforePath="$PROJECT_DIR$/../CarDealerClient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CarDealerClient/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vadim/bd/DatabaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vadim/bd/DatabaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vadim/tables/IdMailMake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vadim/tables/IdMailMake.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vadim/CarSalon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vadim/CarSalon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vadim/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vadim/Constants.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +50,7 @@
       <updated>1701630386501</updated>
       <workItem from="1701630387716" duration="1539000" />
       <workItem from="1701634254344" duration="69000" />
-      <workItem from="1702133680935" duration="4697000" />
+      <workItem from="1702133680935" duration="6100000" />
     </task>
     <task id="LOCAL-00001" summary="finalizing the client">
       <option name="closed" value="true" />
@@ -76,7 +76,23 @@
       <option name="project" value="LOCAL" />
       <updated>1702135965095</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="finalizing the server (maybe)">
+      <option name="closed" value="true" />
+      <created>1702138535223</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1702138535223</updated>
+    </task>
+    <task id="LOCAL-00005" summary="DatabaseController/done ((((((((((((maybe)">
+      <option name="closed" value="true" />
+      <created>1702138674358</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1702138674358</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -85,6 +101,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="finalizing the client" />
     <MESSAGE value="finalizing the server (maybe)" />
-    <option name="LAST_COMMIT_MESSAGE" value="finalizing the server (maybe)" />
+    <MESSAGE value="DatabaseController/done ((((((((((((maybe)" />
+    <option name="LAST_COMMIT_MESSAGE" value="DatabaseController/done ((((((((((((maybe)" />
   </component>
 </project>
