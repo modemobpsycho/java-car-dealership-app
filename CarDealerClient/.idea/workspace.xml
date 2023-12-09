@@ -6,9 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="2466c287-041b-4953-ace8-7f1bd160922f" name="Changes" comment="rework and new fxml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vadim/fxml_controllers/AdminRegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vadim/fxml_controllers/AdminRegistrationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com.vadim/changeUserInfo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com.vadim/changeUserInfo.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com.vadim/regadmin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com.vadim/regadmin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vadim/fxml_controllers/MainMenuUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vadim/fxml_controllers/MainMenuUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vadim/fxml_controllers/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vadim/fxml_controllers/RegistrationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com.vadim/AdminMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com.vadim/AdminMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com.vadim/UserMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com.vadim/UserMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com.vadim/UserMenu1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com.vadim/UserMenu1.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com.vadim/mainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com.vadim/mainWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com.vadim/primary.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com.vadim/primary.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com.vadim/registration.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com.vadim/registration.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CarDealerServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CarDealerServer/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +78,7 @@
       <option name="presentableId" value="Default" />
       <updated>1701634295819</updated>
       <workItem from="1701634296889" duration="25000" />
-      <workItem from="1701787632254" duration="29442000" />
+      <workItem from="1701787632254" duration="32180000" />
     </task>
     <task id="LOCAL-00001" summary="some changes and new fxml's">
       <option name="closed" value="true" />
@@ -251,7 +256,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702159263721</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="rework and new fxml">
+      <option name="closed" value="true" />
+      <created>1702159911236</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1702159911236</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

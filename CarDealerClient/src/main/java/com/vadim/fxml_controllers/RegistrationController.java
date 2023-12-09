@@ -31,11 +31,12 @@ public class RegistrationController {
     private Label nameLabel;
     @FXML
     private Label mailLabel;
+    @FXML
     private Label loginLabel;
     @FXML
     private Label passLabel;
     @FXML
-    private Label backButton;
+    private Button backButton;
     @FXML
     private Label registrationLabel;
 

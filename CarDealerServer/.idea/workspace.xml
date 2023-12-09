@@ -6,8 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="0022c8cd-e508-4c66-b6f6-6c110726a13d" name="Changes" comment="updates in pom.xml for build copypaste">
       <change beforePath="$PROJECT_DIR$/../CarDealerClient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CarDealerClient/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CarDealerClient/src/main/java/com/vadim/fxml_controllers/AdminRegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CarDealerClient/src/main/java/com/vadim/fxml_controllers/AdminRegistrationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CarDealerClient/src/main/resources/com.vadim/regadmin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../CarDealerClient/src/main/resources/com.vadim/regadmin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CarDealerClient/src/main/java/com/vadim/fxml_controllers/MainMenuUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CarDealerClient/src/main/java/com/vadim/fxml_controllers/MainMenuUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CarDealerClient/src/main/java/com/vadim/fxml_controllers/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CarDealerClient/src/main/java/com/vadim/fxml_controllers/RegistrationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CarDealerClient/src/main/resources/com.vadim/AdminMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../CarDealerClient/src/main/resources/com.vadim/AdminMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CarDealerClient/src/main/resources/com.vadim/UserMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../CarDealerClient/src/main/resources/com.vadim/UserMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CarDealerClient/src/main/resources/com.vadim/mainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../CarDealerClient/src/main/resources/com.vadim/mainWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CarDealerClient/src/main/resources/com.vadim/registration.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../CarDealerClient/src/main/resources/com.vadim/registration.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

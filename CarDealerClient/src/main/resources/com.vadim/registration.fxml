@@ -1,14 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.vadim.Registration"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: Black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vadim.fxml_controllers.RegistrationController">
+    <children>
+        <MenuBar layoutX="51.0" layoutY="14.0" style="-fx-background-color: Gray;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <menus>
+                <Menu mnemonicParsing="false">
+                    <graphic>
+                        <Button fx:id="backButton" mnemonicParsing="false" onAction="#exitInMainWindow" style="-fx-background-color: Black;" text="Вернуться" textFill="WHITE" />
+                    </graphic></Menu>
+            </menus>
+        </MenuBar>
+        <AnchorPane layoutX="145.0" layoutY="60.0" prefHeight="296.0" prefWidth="312.0" style="-fx-background-color: Black; -fx-border-color: Gray; -fx-border-width: 3px;">
+            <children>
+                <GridPane layoutX="26.0" layoutY="66.0" prefHeight="162.0" prefWidth="300.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="130.0" minWidth="10.0" prefWidth="64.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="234.0" minWidth="10.0" prefWidth="182.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <PasswordField fx:id="fieldPassword" prefHeight="55.0" prefWidth="167.0" promptText="Пароль" style="-fx-background-color: Gray;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="fieldLogin" prefHeight="37.0" prefWidth="162.0" promptText="Логин" style="-fx-cursor: black; -fx-background-color: Gray;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="fieldName" prefHeight="39.0" prefWidth="202.0" promptText="Фамилия и имя" style="-fx-background-color: Gray;" GridPane.columnIndex="1" />
+                        <TextField fx:id="fieldEmail" prefHeight="39.0" prefWidth="202.0" promptText="Почта" style="-fx-background-color: Gray;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="nameLabel" text="Фамилия и имя" textFill="WHITE" />
+                        <Label fx:id="mailLabel" text="Почта" textFill="WHITE" GridPane.rowIndex="1" />
+                        <Label fx:id="loginLabel" text="Логин" textFill="WHITE" GridPane.rowIndex="2" />
+                        <Label fx:id="passLabel" text="Пароль" textFill="WHITE" GridPane.rowIndex="3" />
+                    </children>
+                </GridPane>
+                <Button fx:id="buttonConfirmRegistration" layoutX="94.0" layoutY="244.0" mnemonicParsing="false" onAction="#RegistrateUser" prefHeight="38.0" prefWidth="125.0" style="-fx-background-color: PaleGreen; -fx-border-color: black; -fx-border-radius: 333; -fx-background-radius: 222;" text="Сохранить">
+                    <font>
+                        <Font name="Calibri Italic" size="19.0" />
+                    </font>
+                </Button>
+                <Label fx:id="header" alignment="CENTER" contentDisplay="CENTER" layoutX="49.0" layoutY="14.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="38.0" prefWidth="250.0" text="Добавление админа" textFill="WHITE">
+                    <font>
+                        <Font name="Calibri Italic" size="28.0" />
+                    </font>
+                </Label>
+            </children></AnchorPane>
+    </children>
 </AnchorPane>

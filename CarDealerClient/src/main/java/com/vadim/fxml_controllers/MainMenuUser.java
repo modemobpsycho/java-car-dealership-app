@@ -358,6 +358,7 @@ public class MainMenuUser {
         NewCarsPane.setVisible(false);
     }
 
+    @FXML
     void BuyOldCar(ActionEvent event) throws IOException, ClassNotFoundException {
         ArrayList<Tables> cars = RequestController.GetOldCars();
         Data.clear();
