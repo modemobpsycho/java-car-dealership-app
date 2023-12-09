@@ -166,20 +166,46 @@ public class CarSalon {
                 } else if (request.equals(Constants.GET_INCOMING_REQ)) {
                     System.out.println("GET_INCOMING_REQ");
 
-                    Integer user_id = (Integer) istream.readObject();
-                    ArrayList<IdMailMake> sended = DatabaseController.GetSended(user_id);
-                    ostream.writeObject(sended);
+                    ArrayList<SuperMMID> incoming = DatabaseController.GetIncoming_();
+                    ostream.writeObject(incoming);
                     continue;
 
                 } else if (request.equals(Constants.GET_USERS)) {
+                    System.out.println("GET_USERS");
+
+                    ArrayList<User> users = DatabaseController.GetAllUsers();
+                    ostream.writeObject(users);
+                    continue;
 
                 } else if (request.equals(Constants.GET_ADMINS)) {
+                    System.out.println("GET_ADMINS");
+
+                    ArrayList<User> admins = DatabaseController.GetAllAdmins();
+                    ostream.writeObject(admins);
+                    continue;
 
                 } else if (request.equals(Constants.BLOCK_USER)) {
+                    System.out.println("BLOCK_USER");
+
+                    Integer id = (Integer) istream.readObject();
+                    BlockUser(id);
+                    continue;
 
                 } else if (request.equals(Constants.UNBLOCK_USER)) {
+                    System.out.println("UNBLOCK_USER");
+
+                    Integer id = (Integer) istream.readObject();
+                    UnblockUser(id);
+                    continue;
 
                 } else if (request.equals(Constants.ACCEPT_REQUEST)) {
+                    System.out.println("ACCEPT_REQUEST");
+
+                    Integer accept_id = (Integer) istream.readObject();
+                    int user_id = istream.readInt();
+                    String make = (String) istream.readObject();
+                    AcceptRequest(accept_id, user_id, make);
+                    continue;
 
                 }
                 ostream.close();
@@ -194,32 +220,103 @@ public class CarSalon {
 
 
     public void Authorization(String login, String pass) {
+        User user;
 
+        user = DatabaseController.GetUser(login, pass);
+        System.out.println(user.GetLogin());
+        try {
+            if (user.getLogin().equals("blocked")) {
+                ostream.writeObject(Constants.BLOCKED);
+            } else {
+                if (user.GetLogin().equals("")) {
+                    ostream.writeObject(Constants.NOT_OK);
+                } else {
+                    ostream.writeObject(Constants.OK);
+                    ostream.writeObject(user);
+                }
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
-    public void Registration(String name, String surname, String mail, String login, String pass) {
-
+    public void Registration(String name, String surname, String mail, String login, String pass) throws IOException, ClassNotFoundException {
+        if(DatabaseController.AddUser(name, surname, mail, login, pass) == true) {
+            ostream.writeObject(Constants.OK);
+        } else {
+            ostream.writeObject(Constants.NOT_OK);
+        }
     }
 
-    public void RegistrationAdmin(String name, String surname, String mail, String login, String pass) {
-
+    public void RegistrationAdmin(String name, String surname, String mail, String login, String pass) throws IOException, ClassNotFoundException {
+        if(DatabaseController.AddAdmin(name, surname, mail, login, pass) == true) {
+            ostream.writeObject(Constants.OK);
+        } else {
+            ostream.writeObject(Constants.NOT_OK);
+        }
     }
 
-    private void SoldCar(Car car) {
+    private void SoldCar(Car car) throws IOException, ClassNotFoundException {
+        if(DatabaseController.AddCarToSoldlist(car) == true) {
+            ostream.writeObject(Constants.OK);
+        } else {
+            ostream.writeObject(Constants.NOT_OK);
+        }
     }
 
-    private void DeleteAcc(User user) {
+    private void DeleteAcc(User user) throws IOException, ClassNotFoundException{
+        if(DatabaseController.DeleteAccFromDB(user) == true) {
+            ostream.writeObject(Constants.OK);
+        } else {
+            ostream.writeObject(Constants.NOT_OK);
+        }
     }
 
-    private void ChangeInfo(User user) {
+    private void ChangeInfo(User user) throws IOException, ClassNotFoundException {
+        System.out.println(user.getName() + user.getSurname() + user.getMail() + " " + user.GetLogin() + " " + user.getPass());
+        if (DatabaseController.ChangeUserInfo(user) == true) {
+            ostream.writeObject(Constants.OK);
+            System.out.println(user.getName() + user.getSurname() + user.getMail() + " " + user.GetLogin() + " " + user.getPass());
+
+            ostream.writeObject(user);
+
+        } else
+            ostream.writeObject(Constants.NOT_OK);
     }
 
-    private void AddRequest(Integer user, String make, Integer ID) {
-
+    private void AddRequest(Integer user, String make, Integer ID) throws IOException, ClassNotFoundException{
+        if (DatabaseController.AddRequest(user, make, ID) == true) {
+            ostream.writeObject(Constants.OK);
+        } else
+            ostream.writeObject(Constants.NOT_OK);
     }
 
-    private void AddRequestNewCar(Integer requestId, String make, String model) {
+    private void AddRequestNewCar(Integer request_id, String make, String model) throws IOException, ClassNotFoundException {
+        if (DatabaseController.AddRequestNewCar(request_id, make, model) == true) {
+            ostream.writeObject(Constants.OK);
+        } else
+            ostream.writeObject(Constants.NOT_OK);
     }
 
+    private void BlockUser(Integer id) throws IOException, ClassNotFoundException {
+        if (DatabaseController.BlockUser(id) == true) {
+            ostream.writeObject(Constants.OK);
+        } else
+            ostream.writeObject(Constants.NOT_OK);
+    }
+
+    private void UnblockUser(Integer id) throws IOException, ClassNotFoundException {
+        if (DatabaseController.UnblockUser(id) == true) {
+            ostream.writeObject(Constants.OK);
+        } else
+            ostream.writeObject(Constants.NOT_OK);
+    }
+
+    private void AcceptRequest(Integer accept_id, int user_id, String make) throws IOException, ClassNotFoundException {
+        if (DatabaseController.AcceptRequest(accept_id, user_id, make) == true) {
+            ostream.writeObject(Constants.OK);
+        } else
+            ostream.writeObject(Constants.NOT_OK);
+    }
 
 }

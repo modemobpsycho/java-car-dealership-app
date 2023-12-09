@@ -57,6 +57,24 @@ public class DatabaseController {
         }
     }
 
+    public static boolean AddUser(String name, String surname, String mail, String login, String pass) {
+        Statement stmt = null;
+
+        User user;
+        try {
+            JDBC.connect();
+            stmt = JDBC.connection.createStatement();
+
+            int i = stmt.executeUpdate("INSERT INTO users(first_name,last_name,mail,login,pass) VALUES('%s','%s','%s','%s','%s');".formatted(name, surname, mail, login, pass));
+            if (i == 0) return false;
+            else return true;
+        } catch (SQLException se) {
+            //Handle errors for JDBC
+            se.printStackTrace();
+            return false;
+        }
+    }
+
     public static boolean AddAdmin(String name, String surname, String mail, String login, String pass) {
         Statement stmt = null;
 
