@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0022c8cd-e508-4c66-b6f6-6c110726a13d" name="Changes" comment="class carsalon| done">
+    <list default="true" id="0022c8cd-e508-4c66-b6f6-6c110726a13d" name="Changes" comment="updates in pom.xml for build copypaste">
+      <change beforePath="$PROJECT_DIR$/../CarDealerClient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CarDealerClient/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CarDealerClient/src/main/resources/com.vadim/AdminMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../CarDealerClient/src/main/resources/com.vadim/AdminMenu.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vadim/tables/SuperMMID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vadim/tables/SuperMMID.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +49,7 @@
       <updated>1701630386501</updated>
       <workItem from="1701630387716" duration="1539000" />
       <workItem from="1701634254344" duration="69000" />
-      <workItem from="1702133680935" duration="10493000" />
+      <workItem from="1702133680935" duration="11968000" />
     </task>
     <task id="LOCAL-00001" summary="finalizing the client">
       <option name="closed" value="true" />
@@ -115,7 +115,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702145087947</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="updates in pom.xml for build copypaste">
+      <option name="closed" value="true" />
+      <created>1702145407971</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1702145407971</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,6 +135,7 @@
     <MESSAGE value="DatabaseController/done ((((((((((((maybe)" />
     <MESSAGE value="class carsalon| I'm working on it" />
     <MESSAGE value="class carsalon| done" />
-    <option name="LAST_COMMIT_MESSAGE" value="class carsalon| done" />
+    <MESSAGE value="updates in pom.xml for build copypaste" />
+    <option name="LAST_COMMIT_MESSAGE" value="updates in pom.xml for build copypaste" />
   </component>
 </project>
