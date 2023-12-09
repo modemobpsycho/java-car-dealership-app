@@ -7,10 +7,10 @@ public class IdMailMake implements Serializable {
     private String mail;
     private Integer id;
 
-    public IdMailMake(Integer i, String ml, String mk) {
+    public IdMailMake(String mk, Integer i, String ml) {
+        make = mk;
         id = i;
         mail = ml;
-        make = ml;
     }
 
     public String getMake() {
