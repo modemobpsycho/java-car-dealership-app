@@ -21,7 +21,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vadim.fxml_controllers.MainMenuUser">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vadim.fxml_controllers.MainMenuUser">
     <children>
         <ImageView fitHeight="579.0" fitWidth="901.0" layoutY="88.8" pickOnBounds="true" AnchorPane.topAnchor="89.0">
             <image>

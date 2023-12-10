@@ -16,7 +16,7 @@ public class ThreadServer {
     }
 
     public static void main(String[] args) throws IOException {
-        start(8080);
+        start(1603);
         acceptingLoop();
     }
 

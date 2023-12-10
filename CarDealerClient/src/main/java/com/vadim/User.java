@@ -3,25 +3,13 @@ package com.vadim;
 import java.io.Serializable;
 
 public class User implements Serializable {
-
     private int id;
     private String name = "";
     private String surname = "";
     private String mail = "";
     private String login = "";
     private String pass = "";
-    private String role = "";
     private String status = "user";
-
-    public User(String name, String surname, String mail, String login) {
-        this.name = name;
-        this.surname = surname;
-        this.mail = mail;
-        this.login = login;
-    }
-    //определиться с типом.
-    public User() {
-    }
 
     public User(int id, String name, String surname, String mail, String login, String pass, String status) {
         this.id = id;
@@ -33,9 +21,16 @@ public class User implements Serializable {
         this.status = status;
     }
 
-    public int getId() {
-        return id;
+    public User(String name, String surname, String mail, String login) {
+        this.name = name;
+        this.surname = surname;
+        this.mail = mail;
+        this.login = login;
     }
+
+    public User() {
+    }
+
     public String getStatus() {
         return status;
     }
@@ -44,12 +39,12 @@ public class User implements Serializable {
         return login;
     }
 
-    public String getName() {
-        return name;
+    public int getId() {
+        return id;
     }
 
-    public int getID() {
-        return id;
+    public String getName() {
+        return name;
     }
 
     public String getSurname() {
@@ -91,5 +86,4 @@ public class User implements Serializable {
     public void setPass(String pass) {
         this.pass = pass;
     }
-
 }

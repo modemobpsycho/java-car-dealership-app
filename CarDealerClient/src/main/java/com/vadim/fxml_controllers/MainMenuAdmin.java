@@ -1,32 +1,31 @@
 package com.vadim.fxml_controllers;
 
-import com.vadim.Car;
-import com.vadim.User;
-import com.vadim.CheckerInput;
-import com.vadim.RequestController;
-import com.vadim.Client;
-import com.vadim.tables.SuperMMID;
-import com.vadim.tables.Tables;
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.util.ArrayList;
+
+import com.vadim.Car;
+import com.vadim.Client;
+import com.vadim.CheckerInput;
+import com.vadim.RequestController;
+import com.vadim.User;
+import com.vadim.tables.SuperMMID;
+
 
 public class MainMenuAdmin {
 
     @FXML
     private TableView<Car> allCarsTable;
+
     @FXML
     private TableView<User> allUsersTable;
     @FXML
@@ -83,8 +82,11 @@ public class MainMenuAdmin {
     private TableColumn<SuperMMID, String> mailColumn1;
     @FXML
     private TableColumn<SuperMMID, String> makeColumn1;
+    // @FXML
+    // private TableColumn<SuperMMID, String> modelColumn1;
     @FXML
     private TableColumn<SuperMMID, Integer> idColumn1;
+
     @FXML
     private TableColumn<SuperMMID, String> makeColumn2;
     @FXML
@@ -109,20 +111,20 @@ public class MainMenuAdmin {
     private TextField idTextField3;
 
 
-    ObservableList<Car> CarsData = FXCollections.observableArrayList();
-    ObservableList<User> Users = FXCollections.observableArrayList();
-    ObservableList<User> Admins = FXCollections.observableArrayList();
-    ObservableList<SuperMMID> IncomingRequests = FXCollections.observableArrayList();
-    ObservableList<SuperMMID> AcceptedRequests = FXCollections.observableArrayList();
+    private ObservableList<Car> CarsData = FXCollections.observableArrayList();
+    private ObservableList<User> Users = FXCollections.observableArrayList();
+    private ObservableList<User> Admins = FXCollections.observableArrayList();
+    private ObservableList<SuperMMID> IncomingRequests = FXCollections.observableArrayList();
+    private ObservableList<SuperMMID> AcceptedRequests = FXCollections.observableArrayList();
 
 
     public MainMenuAdmin() {
-        Client.changeStageSize(Client.st, 915, 680);
+        Client.changeStageSize(Client.st, 915, 687);
     }
 
     @FXML
     public void initialize() throws IOException, ClassNotFoundException {
-        idLabel.setText(Integer.toString(RequestController.user.getID()));
+        idLabel.setText(Integer.toString(RequestController.user.getId()));
         nameLabel.setText(RequestController.user.getName() + " " + RequestController.user.getSurname());
         emailLabel.setText(RequestController.user.getMail());
         loginLabel.setText(RequestController.user.getLogin());
@@ -145,10 +147,12 @@ public class MainMenuAdmin {
         loginColumn11.setCellValueFactory(new PropertyValueFactory<User, String>("login"));
 
         makeColumn1.setCellValueFactory(new PropertyValueFactory<SuperMMID, String>("make"));
+        // modelColumn1.setCellValueFactory(new PropertyValueFactory<SuperMMID, String>("model"));
         idColumn1.setCellValueFactory(new PropertyValueFactory<SuperMMID, Integer>("id"));
         mailColumn1.setCellValueFactory(new PropertyValueFactory<SuperMMID, String>("mail"));
 
         makeColumn2.setCellValueFactory(new PropertyValueFactory<SuperMMID, String>("make"));
+        // modelColumn1.setCellValueFactory(new PropertyValueFactory<MMIDMail, String>("model"));
         modelColumn2.setCellValueFactory(new PropertyValueFactory<SuperMMID, String>("model"));
         idColumn2.setCellValueFactory(new PropertyValueFactory<SuperMMID, Integer>("id"));
 
@@ -156,6 +160,7 @@ public class MainMenuAdmin {
         for (var c : cars) {
             CarsData.add(c);
         }
+        allCarsTable.setItems(CarsData);
 
         ArrayList<User> users = RequestController.GetAllUsers();
         for (var c : users) {
@@ -180,6 +185,7 @@ public class MainMenuAdmin {
         acceptedRequests.setItems(AcceptedRequests);
     }
 
+
     @FXML
     void ExitAction(ActionEvent event) {
 
@@ -201,10 +207,12 @@ public class MainMenuAdmin {
         }
     }
 
+
     @FXML
     void changeUserInfo(ActionEvent event) throws IOException, ClassNotFoundException {
         Client.setRoot("changeUserInfo");
     }
+
 
     @FXML
     void comeBack(ActionEvent event) throws IOException {
@@ -219,7 +227,7 @@ public class MainMenuAdmin {
 
     @FXML
     void BlockUser(ActionEvent event) throws IOException, ClassNotFoundException {
-        String id = idTextField.getText();
+        String id = idTextField1.getText();
         try {
             Integer i = Integer.parseInt(id);
             RequestController.BlockUser(i);
@@ -237,7 +245,9 @@ public class MainMenuAdmin {
         } catch (NumberFormatException e) {
             EnterController.ThrowAlert("Error", "", "Wrong id");
         }
+
     }
+
     @FXML
     void DeleteUser(ActionEvent event) throws IOException, ClassNotFoundException {
         String id = idTextField.getText();
@@ -251,6 +261,12 @@ public class MainMenuAdmin {
             for (var c : users) {
                 Users.add(c);
             }
+            allUsersTable.setItems(Users);
+
+            ArrayList<User> admins = RequestController.GetAllAdmins();
+            for (var c : admins) {
+                Admins.add(c);
+            }
             allAdminsTable.setItems(Admins);
         } catch (NumberFormatException e) {
             EnterController.ThrowAlert("Error", "", "Wrong id");
@@ -259,24 +275,26 @@ public class MainMenuAdmin {
 
     @FXML
     void AddAdmin(ActionEvent event) throws IOException, ClassNotFoundException {
-        Client.setRoot("regAdmin");
+        Client.setRoot("regadmin");
     }
 
     @FXML
     void AcceptRequest(ActionEvent event) throws IOException, ClassNotFoundException {
+
         String[] make_id;
-        String field = idTextField.getText();
+        String field = idTextField3.getText();
         Integer ID;
         make_id = field.split(" ");
         if (field.isEmpty()) {
             EnterController.ThrowAlert("Error", "Error", "Something is empty");
         } else if (!CheckerInput.validateMakeID(field))
-            EnterController.ThrowAlert("Error", "Error", "Wrong id");
+            EnterController.ThrowAlert("Error", "Error", "Wrong format");
         else {
             ID = Integer.parseInt(make_id[1]);
             if (ID == RequestController.user.getId())
                 EnterController.ThrowAlert("Error", "Error", "Wrong id");
             else {
+
                 RequestController.AcceptRequest(ID, make_id[0]);
                 AcceptedRequests.clear();
                 var accepted = RequestController.GetAccepted();
@@ -288,8 +306,9 @@ public class MainMenuAdmin {
                 for (var c : incoming) {
                     IncomingRequests.add(c);
                 }
+                //acceptedRequests.setItems(AcceptedRequests);;
             }
         }
-
     }
+
 }

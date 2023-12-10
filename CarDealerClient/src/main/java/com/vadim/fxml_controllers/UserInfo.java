@@ -1,18 +1,19 @@
 package com.vadim.fxml_controllers;
 
-import java.io.IOException;
-import java.util.function.UnaryOperator;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
-import javafx.collections.ListChangeListener.Change;
+import java.io.IOException;
+
+import com.vadim.CheckerInput;
+import com.vadim.Client;
+import com.vadim.CheckerInput;
+import com.vadim.RequestController;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
-import javafx.scene.control.Alert.AlertType;
-import com.vadim.RequestController;
-import com.vadim.*;
-import org.w3c.dom.Text;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 
 public class UserInfo {
 
@@ -52,33 +53,50 @@ public class UserInfo {
 
     @FXML
     public void initialize() {
-        header.setText("Change user info");
-        subtitle.setText("Enter only what you want to change");
-        backButton.setText("Back");
-        nameLabel.setText("Surname and name");
-        mailLabel.setText("Mail");
-        loginLabel.setText("Login");
-        passLabel.setText("Pass");
-        buttonApply.setText("Apply");
+        if (Client.language.equals("eng")) {
+            header.setText("Change user info");
+            subtitle.setText("Enter only what you want to change");
+            backButton.setText("Back");
+            nameLabel.setText("Surname and name");
+            mailLabel.setText("Mail");
+            loginLabel.setText("Login");
+            passLabel.setText("Pass");
+            buttonApply.setText("Apply");
 
-        fieldName.setPromptText("Surname and name");
-        fieldEmail.setPromptText("Email");
-        fieldLogin.setPromptText("Login");
-        fieldPassword.setPromptText("Pass");
+            fieldName.setPromptText("Surname and name");
+            fieldEmail.setPromptText("Email");
+            fieldLogin.setPromptText("Login");
+            fieldPassword.setPromptText("Pass");
+        }
+        //    else{
+        //         header.setText("Изменение персональных данных");
+        //         subtitle.setText("Введите только то, что хотите изменить");
+        //        buttonApply.setText("Сохранить");
+        //        backButton.setText("Назад");
+        //        nameLabel.setText("Фамилия и имя");
+        //        mailLabel.setText("Почта");
+        //        loginLabel.setText("Логин");
+        //        passLabel.setText("Пароль");
+
+        //        fieldName.setPromptText("Фамилия и имя");
+        //        fieldEmail.setPromptText("Почта");
+        //        fieldLogin.setPromptText("Логин");
+        //        fieldPassword.setPromptText("Пароль");
+        //    }
     }
 
     @FXML
     void ApplyChanges(ActionEvent event) throws IOException, ClassNotFoundException {
-        String[] fio;
+        String[] fio;//=new String[2];
+        //fio[0]="";
+        //fio[1]="";
 
         String name = fieldName.getText();
         fio = name.split(" ");
         String mail = fieldEmail.getText();
         String login = fieldLogin.getText();
         String pass = fieldPassword.getText();
-
-
-        if (name.isEmpty() && mail.isEmpty() && pass.isEmpty()) {
+        if (name.isEmpty() && mail.isEmpty() && login.isEmpty() && pass.isEmpty()) {
             EnterController.ThrowAlert("Error", "Error", "All is empty");
         } else if (!CheckerInput.validateEmail(mail) && !mail.isEmpty())
             EnterController.ThrowAlert("Error", "Error", "Wrong mail format");
@@ -87,17 +105,18 @@ public class UserInfo {
         else {
             if (!name.isEmpty())
                 RequestController.ChangeUserInfo(fio[0], fio[1], mail, login, pass);
-            else
+            else {
                 RequestController.ChangeUserInfo("", "", mail, login, pass);
+            }
         }
     }
 
     @FXML
     void exitUserMenu(ActionEvent event) throws IOException {
-        if (RequestController.user.getStatus().equals("admin")) {
+        if (RequestController.user.getStatus().equals("admin"))
             Client.setRoot("AdminMenu");
-        } else {
+        else
             Client.setRoot("UserMenu");
-        }
     }
+
 }

@@ -11,22 +11,33 @@ import java.io.IOException;
 import java.io.*;
 import java.net.*;
 
-public class Client {
+/**
+ * JavaFX App
+ */
+
+public class Client extends Application {
 
     private static Scene scene;
     public static Socket server;
     public static ObjectOutputStream ostream;
     public static ObjectInputStream istream;
     public static Stage st;
+    public static String language = "rus";
 
-    //@Override
+
+    @Override
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("mainWindow"), 600, 405);
         stage.setScene(scene);
-        stage.setTitle("Автосалончик");
+        stage.setTitle("Автосалон");
         stage.setResizable(false);
         st = stage;
         stage.show();
+    }
+
+    public static void changeStageSize(Window stage, int width, int height) {
+        stage.setWidth(width);
+        stage.setHeight(height);
     }
 
     public static void setRoot(String fxml) throws IOException {
@@ -38,24 +49,32 @@ public class Client {
         return fxmlLoader.load();
     }
 
-    public static void changeStageSize(Window stage, int width, int height) {
-        stage.setWidth(width);
-        stage.setHeight(height);
-    }
-
     public static void main(String[] args) throws IOException {
-        ConnnectToServer();
+        ConnectToServer();
+        launch();
+        // while(true){
+        //     int i=istream.readInt();
+        //     System.out.println(i);
+        // }
+
+        // try{
+        //     server.close();
+        //     }catch (IOException e){
+        //         throw new RuntimeException(e);
+        //     }
     }
 
-    public static void ConnnectToServer() {
+    public static void ConnectToServer() {
         try {
-            System.out.println("----Connection to server----");
-            server = new Socket("127.0.0.1", 8080);
-            System.out.println("----Success----");
+            System.out.println("#### CONNECTION TO SERVER ####");
+            server = new Socket("127.0.0.1", 1603);
+            System.out.println("#### CONNECT SUCCESSFUL ####");
             ostream = new ObjectOutputStream(Client.server.getOutputStream());
             istream = new ObjectInputStream(Client.server.getInputStream());
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
+
 }

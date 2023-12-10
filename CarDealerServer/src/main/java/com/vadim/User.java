@@ -10,7 +10,6 @@ public class User implements Serializable {
     private String mail = "";
     private String login = "";
     private String pass = "";
-    private String role = "";
     private String status = "user";
 
     public User(int id, String name, String surname, String mail, String login, String pass, String status) {
@@ -20,7 +19,6 @@ public class User implements Serializable {
         this.mail = mail;
         this.login = login;
         this.pass = pass;
-        this.role = role;
         this.status = status;
     }
 

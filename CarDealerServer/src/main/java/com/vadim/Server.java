@@ -12,10 +12,10 @@ public class Server extends Thread {
 
     @Override
     public void run() {
-        CarSalon carsalon = new CarSalon(client);
+        Carsalon carsalon = new Carsalon(client);
 
         try {
-            carsalon.getRequest();
+            carsalon.GetRequest();
             client.close();
         } catch (IOException e) {
             throw new RuntimeException(e);
