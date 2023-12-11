@@ -7,40 +7,59 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: Black;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vadim.fxml_controllers.EnterController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: Black; -fx-border-color: #00FFE6FF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vadim.fxml_controllers.EnterController">
     <children>
-        <ImageView fitHeight="343.0" fitWidth="400.0" layoutY="57.0" pickOnBounds="true">
+        <ImageView fitHeight="385.0" fitWidth="589.0" layoutX="11.0" layoutY="15.0" pickOnBounds="true">
             <image>
-                <Image url="@audi.jpg" />
+                <Image url="@logo.jpg" />
             </image></ImageView>
-        <Label fx:id="header" layoutX="-1.0" prefHeight="77.0" prefWidth="384.0" text="Автосалон" textFill="WHITE">
+        <Label fx:id="header" layoutX="89.0" layoutY="-1.0" prefHeight="78.0" prefWidth="499.0" text="ABS-AUTO DEALERSHIP" textAlignment="CENTER">
             <font>
-                <Font name="Castellar" size="53.0" />
+                <Font name="ArtifaktElement-Light" size="38.0" />
             </font>
+         <textFill>
+            <RadialGradient centerX="1.0" centerY="0.5" radius="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.2370370328426361" green="0.8092592358589172" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.23999999463558197" green="1.0" blue="0.7964975237846375" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
         </Label>
-        <AnchorPane layoutX="378.0" layoutY="57.0" prefHeight="343.0" prefWidth="222.0" style="-fx-background-color: Black;">
+        <AnchorPane layoutX="189.0" layoutY="52.0" opacity="0.75" prefHeight="343.0" prefWidth="222.0" style="-fx-background-color: Black;">
             <children>
-                <Button fx:id="buttonSignIn" layoutX="64.0" layoutY="227.0" mnemonicParsing="false" onAction="#buttonEnterAction" prefHeight="42.0" prefWidth="94.0" style="-fx-background-color: silver; -fx-background-radius: 15; -fx-border-color: black; -fx-border-radius: 15;" text="Вход" textAlignment="CENTER">
+                <Button fx:id="buttonSignIn" cache="true" layoutX="75.0" layoutY="229.0" mnemonicParsing="false" onAction="#buttonEnterAction" prefHeight="42.0" prefWidth="94.0" style="-fx-background-color: White; -fx-background-radius: 15; -fx-border-color: black; -fx-border-radius: 15;" text="Вход" textAlignment="CENTER">
                     <font>
                         <Font name="Calibri Italic" size="21.0" />
                     </font>
                 </Button>
-                <TextField fx:id="textFieldLogin" layoutX="40.0" layoutY="94.0" prefHeight="32.0" prefWidth="164.0" promptText="Логин" style="-fx-background-radius: 8; -fx-border-color: black; -fx-border-radius: 8;">
+                <TextField fx:id="textFieldLogin" layoutX="40.0" layoutY="94.0" prefHeight="32.0" prefWidth="164.0" promptText="Логин" style="-fx-background-radius: 8; -fx-border-color: #00FFE6FF; -fx-border-radius: 8;">
                     <font>
                         <Font size="14.0" />
                     </font>
                 </TextField>
-                <Button fx:id="buttonRegister" layoutX="46.0" layoutY="281.0" mnemonicParsing="false" onAction="#buttonRegisterAction" prefHeight="42.0" prefWidth="153.0" style="-fx-background-color: silver; -fx-background-radius: 15; -fx-border-color: black; -fx-border-radius: 15;" text="Регистрация" textAlignment="CENTER">
+                <Button fx:id="buttonRegister" layoutX="46.0" layoutY="281.0" mnemonicParsing="false" onAction="#buttonRegisterAction" prefHeight="42.0" prefWidth="153.0" style="-fx-background-color: #00FFE6FF; -fx-background-radius: 15; -fx-border-color: black; -fx-border-radius: 15;" text="Регистрация" textAlignment="CENTER">
                     <font>
-                        <Font name="Calibri Italic" size="21.0" />
+                        <Font name="Calibri Italic" size="20.0" />
                     </font>
                 </Button>
-                <PasswordField fx:id="textFieldPassword" layoutX="41.0" layoutY="172.0" prefHeight="32.0" prefWidth="164.0" promptText="Пароль" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: black;" />
+                <PasswordField fx:id="textFieldPassword" layoutX="41.0" layoutY="172.0" prefHeight="32.0" prefWidth="164.0" promptText="Пароль" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #00FFE6FF;" />
                 <Label fx:id="loginLabel" layoutX="50.0" layoutY="69.0" text="Логин:" textFill="WHITE" />
                 <Label fx:id="passLabel" layoutX="46.0" layoutY="147.0" text="Пароль:" textFill="WHITE" />
             </children></AnchorPane>
-        <Button fx:id="languageButton" layoutX="489.0" layoutY="26.0" mnemonicParsing="false" onAction="#ChangeLanguage" prefHeight="25.0" prefWidth="94.0" text="Language: eng" />
+        <Button fx:id="languageButton" layoutX="14.0" layoutY="341.0" mnemonicParsing="false" onAction="#ChangeLanguage" opacity="0.6" prefHeight="27.0" prefWidth="106.0" style="-fx-border-color: #00FFE6FF;" text="Language: rus" />
     </children>
 </AnchorPane>

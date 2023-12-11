@@ -6,23 +6,27 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="394.0" prefWidth="601.0" style="-fx-background-color: Gray;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vadim.fxml_controllers.RegistrationController">
+<AnchorPane prefHeight="394.0" prefWidth="601.0" style="-fx-background-color: #00ffe6;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vadim.fxml_controllers.RegistrationController">
     <children>
-        <MenuBar layoutX="51.0" layoutY="14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <ImageView fitHeight="408.0" fitWidth="618.0" layoutX="-5.0" pickOnBounds="true">
+            <image>
+                <Image url="@logo.jpg" />
+            </image>
+      </ImageView>
+        <MenuBar layoutX="51.0" layoutY="14.0" style="-fx-background-color: Black;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <menus>
-                <Menu mnemonicParsing="false">
-                    <graphic>
-                        <Button fx:id="backButton" mnemonicParsing="false" onAction="#exitInMainWindow" text="Вернуться" />
-                    </graphic></Menu>
+                <Menu mnemonicParsing="false" />
             </menus>
         </MenuBar>
-        <AnchorPane layoutX="145.0" layoutY="60.0" prefHeight="296.0" prefWidth="312.0" style="-fx-background-color: Gray;">
+        <AnchorPane layoutX="145.0" layoutY="60.0" prefHeight="296.0" prefWidth="312.0" style="-fx-background-color: Black;">
             <children>
                 <GridPane layoutX="26.0" layoutY="66.0" prefHeight="162.0" prefWidth="300.0">
                     <columnConstraints>
@@ -40,10 +44,10 @@
                         <TextField fx:id="fieldLogin" prefHeight="37.0" prefWidth="162.0" promptText="Логин" style="-fx-cursor: black;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                         <TextField fx:id="fieldName" prefHeight="39.0" prefWidth="202.0" promptText="Фамилия и имя" GridPane.columnIndex="1" />
                         <TextField fx:id="fieldEmail" prefHeight="39.0" prefWidth="202.0" promptText="Почта" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Label fx:id="nameLabel" text="Фамилия и имя" />
-                        <Label fx:id="mailLabel" text="Почта" GridPane.rowIndex="1" />
-                        <Label fx:id="loginLabel" text="Логин" GridPane.rowIndex="2" />
-                        <Label fx:id="passLabel" text="Пароль" GridPane.rowIndex="3" />
+                        <Label fx:id="nameLabel" text="Фамилия и имя" textFill="WHITE" />
+                        <Label fx:id="mailLabel" text="Почта" textFill="WHITE" GridPane.rowIndex="1" />
+                        <Label fx:id="loginLabel" text="Логин" textFill="WHITE" GridPane.rowIndex="2" />
+                        <Label fx:id="passLabel" text="Пароль" textFill="WHITE" GridPane.rowIndex="3" />
                     </children>
                 </GridPane>
                 <Button fx:id="buttonConfirmRegistration" layoutX="94.0" layoutY="244.0" mnemonicParsing="false" onAction="#RegistrateUser" prefHeight="38.0" prefWidth="125.0" style="-fx-background-color: PaleGreen; -fx-border-color: black; -fx-border-radius: 333; -fx-background-radius: 222;" text="Сохранить">
@@ -51,11 +55,12 @@
                         <Font name="Calibri Italic" size="19.0" />
                     </font>
                 </Button>
-                <Label fx:id="registrationLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="49.0" layoutY="14.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="38.0" prefWidth="215.0" text="Регистрация" textFill="#111010">
+                <Label fx:id="registrationLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="49.0" layoutY="14.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="38.0" prefWidth="215.0" text="Регистрация" textFill="WHITE">
                     <font>
-                        <Font name="Calibri Italic" size="28.0" />
+                        <Font name="Artifakt Element Heavy Italic" size="28.0" />
                     </font>
                 </Label>
             </children></AnchorPane>
+            <Button fx:id="backButton" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#exitInMainWindow" style="-fx-background-color: White;" text="Вернуться" />
     </children>
 </AnchorPane>
