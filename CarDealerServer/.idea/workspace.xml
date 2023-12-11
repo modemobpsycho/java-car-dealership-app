@@ -5,37 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0022c8cd-e508-4c66-b6f6-6c110726a13d" name="Changes" comment="updates in pom.xml for build copypaste">
-      <change beforePath="$PROJECT_DIR$/../.idea/CarDealerShip.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/CarDealerShip.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CarDealerClient/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CarDealerClient/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CarDealerClient/src/main/resources/com.vadim/titledPane.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CarDealerClient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CarDealerClient/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CarDealerClient/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CarDealerClient/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CarDealerClient/src/main/java/com/vadim/CheckerInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CarDealerClient/src/main/java/com/vadim/CheckerInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CarDealerClient/src/main/java/com/vadim/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CarDealerClient/src/main/java/com/vadim/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CarDealerClient/src/main/java/com/vadim/RequestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CarDealerClient/src/main/java/com/vadim/RequestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CarDealerClient/src/main/java/com/vadim/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CarDealerClient/src/main/java/com/vadim/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CarDealerClient/src/main/java/com/vadim/WindowsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CarDealerClient/src/main/java/com/vadim/WindowsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CarDealerClient/src/main/java/com/vadim/fxml_controllers/AdminRegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CarDealerClient/src/main/java/com/vadim/fxml_controllers/AdminRegistrationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CarDealerClient/src/main/java/com/vadim/fxml_controllers/EnterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CarDealerClient/src/main/java/com/vadim/fxml_controllers/EnterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CarDealerClient/src/main/java/com/vadim/fxml_controllers/MainMenuAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CarDealerClient/src/main/java/com/vadim/fxml_controllers/MainMenuAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CarDealerClient/src/main/java/com/vadim/fxml_controllers/MainMenuUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CarDealerClient/src/main/java/com/vadim/fxml_controllers/MainMenuUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CarDealerClient/src/main/java/com/vadim/fxml_controllers/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CarDealerClient/src/main/java/com/vadim/fxml_controllers/RegistrationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CarDealerClient/src/main/java/com/vadim/fxml_controllers/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CarDealerClient/src/main/java/com/vadim/fxml_controllers/UserInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CarDealerClient/src/main/resources/com.vadim/AdminMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../CarDealerClient/src/main/resources/com.vadim/AdminMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CarDealerClient/src/main/java/com/vadim/RequestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CarDealerClient/src/main/java/com/vadim/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CarDealerClient/src/main/java/com/vadim/WindowsController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CarDealerClient/src/main/java/com/vadim/fxml_controllers/UserInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CarDealerClient/src/main/java/com/vadim/tables/SuperMMID.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CarDealerClient/src/main/java/com/vadim/tables/Tables.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../CarDealerClient/src/main/resources/com.vadim/UserMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../CarDealerClient/src/main/resources/com.vadim/UserMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CarDealerClient/src/main/resources/com.vadim/changeUserInfo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../CarDealerClient/src/main/resources/com.vadim/changeUserInfo.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CarDealerClient/src/main/resources/com.vadim/mainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../CarDealerClient/src/main/resources/com.vadim/mainWindow.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CarDealerClient/src/main/resources/com.vadim/regadmin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../CarDealerClient/src/main/resources/com.vadim/regadmin.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CarDealerClient/src/main/resources/com.vadim/registration.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../CarDealerClient/src/main/resources/com.vadim/registration.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vadim/Administrators.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vadim/CarSalon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vadim/Carsalon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vadim/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vadim/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vadim/ThreadServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vadim/ThreadServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vadim/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vadim/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vadim/bd/DatabaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vadim/bd/DatabaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vadim/bd/JDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vadim/bd/JDBC.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +63,7 @@
       <workItem from="1702133680935" duration="12958000" />
       <workItem from="1702163009533" duration="42000" />
       <workItem from="1702169571300" duration="5493000" />
-      <workItem from="1702212126598" duration="9754000" />
+      <workItem from="1702212126598" duration="13830000" />
     </task>
     <task id="LOCAL-00001" summary="finalizing the client">
       <option name="closed" value="true" />

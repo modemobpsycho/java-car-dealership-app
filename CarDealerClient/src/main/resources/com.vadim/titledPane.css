@@ -1,0 +1,15 @@
+.titled-pane {
+    -fx-background-color: #F0F0F0; /* фон TitledPane */
+}
+
+.titled-pane .title {
+    -fx-text-fill: #000000; /* цвет текста заголовка */
+}
+
+.titled-pane .title .arrow-button {
+    -fx-background-color: #00ffc3; /* цвет стрелки заголовка */
+}
+
+.titled-pane .content {
+    -fx-background-color: #00ffe6; /* фон содержимого TitledPane */
+}
