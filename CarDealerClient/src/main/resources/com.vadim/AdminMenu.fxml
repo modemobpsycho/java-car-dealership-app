@@ -240,9 +240,9 @@
             </content>
         </TitledPane>
         <Button focusTraversable="false" layoutX="721.0" layoutY="48.0" mnemonicParsing="false" onAction="#AddAdmin" opacity="0.9" prefHeight="27.0" prefWidth="179.0" text="Добавление админа" textAlignment="CENTER" />
-        <Button focusTraversable="false" layoutX="721.0" layoutY="48.0" mnemonicParsing="false" onAction="#showDiagramLeader" opacity="0.9" prefHeight="48.0" prefWidth="179.0" text="Диаграмма стран-лидеров продаж авто/2023" textAlignment="CENTER" wrapText="true" />
-        <Button focusTraversable="false" layoutX="721.0" layoutY="48.0" mnemonicParsing="false" onAction="#showStatCars" opacity="0.9" prefHeight="42.0" prefWidth="179.0" text="Статистика мировых продаж автомобилей/2023" textAlignment="CENTER" wrapText="true" />
-        <Button focusTraversable="false" layoutX="721.0" layoutY="48.0" mnemonicParsing="false" onAction="#showStatLeader" opacity="0.9" prefHeight="42.0" prefWidth="179.0" text="Статистика мировых продаж по странам/2023" textAlignment="CENTER" wrapText="true" />
-        <Button focusTraversable="false" layoutX="721.0" layoutY="48.0" mnemonicParsing="false" onAction="#showDiagramCars" opacity="0.9" prefHeight="42.0" prefWidth="179.0" text="Диаграмма самых продаваемых авто/2023" textAlignment="CENTER" wrapText="true" />
+        <Button focusTraversable="false" layoutX="721.0" layoutY="75.0" mnemonicParsing="false" onAction="#showDiagramLeader" opacity="0.9" prefHeight="48.0" prefWidth="179.0" text="Диаграмма стран-лидеров продаж авто/2023" textAlignment="CENTER" wrapText="true" />
+        <Button focusTraversable="false" layoutX="721.0" layoutY="201.0" mnemonicParsing="false" onAction="#showStatCars" opacity="0.9" prefHeight="42.0" prefWidth="179.0" text="Статистика мировых продаж автомобилей/2023" textAlignment="CENTER" wrapText="true" />
+        <Button focusTraversable="false" layoutX="721.0" layoutY="162.0" mnemonicParsing="false" onAction="#showStatLeader" opacity="0.9" prefHeight="42.0" prefWidth="179.0" text="Статистика мировых продаж по странам/2023" textAlignment="CENTER" wrapText="true" />
+        <Button focusTraversable="false" layoutX="721.0" layoutY="122.0" mnemonicParsing="false" onAction="#showDiagramCars" opacity="0.9" prefHeight="42.0" prefWidth="179.0" text="Диаграмма самых продаваемых авто/2023" textAlignment="CENTER" wrapText="true" />
     </children>
 </AnchorPane>

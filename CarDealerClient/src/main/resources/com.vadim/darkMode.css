@@ -1,0 +1,61 @@
+.light-windows{ /*висит на меню баре сверху, но меняет только бэк цвет*/
+    -fx-background-color: #2c2c2c;
+    -fx-text-fill: #ffffff;
+}
+
+.menu-item .label { /*висит на верхнем заголовке и управляет цветом текста сверху*/
+    -fx-text-fill: #ffffff;
+}
+
+.light-back { /*висит на фотке*/
+    -fx-opacity: 0.5;
+}
+
+.fill-back-table {
+    -fx-content-display: text-only;
+    -fx-text-fill: black;
+    -fx-border-color: #1e1e1e;
+}
+
+.tab .tab-label {
+    -fx-text-fill: #ffffff; /* Измените на нужный вам цвет текста вкладки */
+    -fx-background-color: #2c2c2c; /* Измените на нужный вам цвет фона вкладки */
+}
+
+.tab-pane {
+    -fx-background-color: #ffffff; /* Измените на нужный вам цвет фона TabPane */
+}
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: #383838; /* Измените на нужный вам цвет фона заголовков в TabPane */
+}
+
+.tab-pane .tab-header-area .tab:selected .tab-label {
+    -fx-text-fill: #ffffff; /* Измените на нужный вам цвет текста выбранного заголовка в TabPane */
+}
+
+.table-view {
+    -fx-background-color: #2c2c2c; /* Измените на нужный вам цвет для заголовков колонок */
+    -fx-text-fill: #ffffff;
+}
+
+.titled-pane {
+    -fx-background-color: #2c2c2c; /* Фоновый цвет TitledPane */
+    -fx-text-fill: #ffffff; /* Цвет текста заголовка TitledPane */
+}
+
+.titled-pane .title { /*висит на заголовках таблиц*/
+    -fx-background-color: #2c2c2c; /* Фоновый цвет заголовка TitledPane */
+}
+
+.titled-pane:focused {
+    -fx-background-color: #2c2c2c; /* Фоновый цвет TitledPane в состоянии фокуса */
+}
+
+.titled-pane:expanded {
+    -fx-background-color: #2c2c2c; /* Фоновый цвет TitledPane в развернутом состоянии */
+}
+
+.text-field {
+    -fx-text-fill: #a1a0a0; /* Измените на нужный вам цвет текста в TextField */
+}
