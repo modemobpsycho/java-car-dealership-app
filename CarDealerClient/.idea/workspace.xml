@@ -4,18 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2466c287-041b-4953-ace8-7f1bd160922f" name="Changes" comment="reworked all">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com.vadim/titledPane.css" afterDir="false" />
+    <list default="true" id="2466c287-041b-4953-ace8-7f1bd160922f" name="Changes" comment="reworked all over">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/CarDealerClient_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com.vadim/diagram_cars.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com.vadim/diagram_leader.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com.vadim/statistics_cars.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com.vadim/statistics_leader.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vadim/RequestController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vadim/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vadim/WindowsController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vadim/fxml_controllers/UserInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vadim/tables/SuperMMID.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vadim/tables/Tables.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com.vadim/UserMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com.vadim/UserMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com.vadim/statistics_cars.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com.vadim/statistics_cars.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com.vadim/statistics_leader.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com.vadim/statistics_leader.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com.vadim/audi.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../CarDealerServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CarDealerServer/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +26,7 @@
       <list>
         <option value="module-info" />
         <option value="FxmlFile" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -52,12 +51,13 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/study3course/CourseWork/CarDealerShip/CarDealerClient/src/main/resources/com.vadim",
+    "last_opened_file_path": "C:/study3course/CourseWork/CourseProgram",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Libraries",
+    "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "settings.sync",
@@ -104,7 +104,7 @@
       <workItem from="1701634296889" duration="25000" />
       <workItem from="1701787632254" duration="32209000" />
       <workItem from="1702169468541" duration="5955000" />
-      <workItem from="1702212131118" duration="26814000" />
+      <workItem from="1702212131118" duration="61167000" />
     </task>
     <task id="LOCAL-00001" summary="some changes and new fxml's">
       <option name="closed" value="true" />
@@ -322,7 +322,31 @@
       <option name="project" value="LOCAL" />
       <updated>1702305711650</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="reworked all">
+      <option name="closed" value="true" />
+      <created>1702312169939</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1702312169939</updated>
+    </task>
+    <task id="LOCAL-00029" summary="reworked all">
+      <option name="closed" value="true" />
+      <created>1702326484463</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1702326484463</updated>
+    </task>
+    <task id="LOCAL-00030" summary="reworked all over">
+      <option name="closed" value="true" />
+      <created>1702346621587</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1702346621588</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -353,7 +377,8 @@
     <MESSAGE value="css file and fxml's" />
     <MESSAGE value="rework and new fxml" />
     <MESSAGE value="reworked all" />
-    <option name="LAST_COMMIT_MESSAGE" value="reworked all" />
+    <MESSAGE value="reworked all over" />
+    <option name="LAST_COMMIT_MESSAGE" value="reworked all over" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

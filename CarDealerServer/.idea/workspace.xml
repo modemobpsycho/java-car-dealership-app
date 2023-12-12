@@ -4,16 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0022c8cd-e508-4c66-b6f6-6c110726a13d" name="Changes" comment="updates in pom.xml for build copypaste">
-      <change afterPath="$PROJECT_DIR$/../CarDealerClient/src/main/resources/com.vadim/titledPane.css" afterDir="false" />
+    <list default="true" id="0022c8cd-e508-4c66-b6f6-6c110726a13d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../CarDealerClient/.idea/artifacts/CarDealerClient_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CarDealerClient/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CarDealerClient/src/main/resources/com.vadim/diagram_cars.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CarDealerClient/src/main/resources/com.vadim/diagram_leader.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CarDealerClient/src/main/resources/com.vadim/statistics_cars.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CarDealerClient/src/main/resources/com.vadim/statistics_leader.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CarDealerClient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CarDealerClient/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CarDealerClient/src/main/java/com/vadim/RequestController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CarDealerClient/src/main/java/com/vadim/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CarDealerClient/src/main/java/com/vadim/WindowsController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CarDealerClient/src/main/java/com/vadim/fxml_controllers/UserInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CarDealerClient/src/main/java/com/vadim/tables/SuperMMID.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CarDealerClient/src/main/java/com/vadim/tables/Tables.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CarDealerClient/src/main/resources/com.vadim/UserMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../CarDealerClient/src/main/resources/com.vadim/UserMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CarDealerClient/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CarDealerClient/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CarDealerClient/src/main/resources/com.vadim/audi.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +63,7 @@
       <workItem from="1702133680935" duration="12958000" />
       <workItem from="1702163009533" duration="42000" />
       <workItem from="1702169571300" duration="5493000" />
-      <workItem from="1702212126598" duration="13830000" />
+      <workItem from="1702212126598" duration="18412000" />
     </task>
     <task id="LOCAL-00001" summary="finalizing the client">
       <option name="closed" value="true" />
