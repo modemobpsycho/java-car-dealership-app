@@ -63,6 +63,7 @@ public class DatabaseController {
             int i=stmt.executeUpdate("INSERT INTO users(first_name,last_name,mail,login,pass) VALUES('%s','%s','%s','%s','%s');".formatted(name,surname,mail,login,pass));
             if(i==0) return false;
             else return true;
+
         }
         catch (SQLException se) {
             se.printStackTrace();
@@ -80,6 +81,7 @@ public class DatabaseController {
             int i=stmt.executeUpdate("INSERT INTO users(first_name,last_name,mail,login,pass,status) VALUES('%s','%s','%s','%s','%s','admin');".formatted(name,surname,mail,login,pass));
             if(i==0) return false;
             else return true;
+
         }
         catch (SQLException se) {
             //Handle errors for JDBC
